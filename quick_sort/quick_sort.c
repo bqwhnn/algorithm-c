@@ -2,7 +2,8 @@
 
 void quick_sort(int a[], int first, int last) {
     if (first < last) {
-        int i, j = first, last;
+        int i = first;
+        int j = last;
         int x = a[first];
 
         while (i < j) {
@@ -16,7 +17,7 @@ void quick_sort(int a[], int first, int last) {
                 a[j--] = a[i];
         }
         a[i] = x;
-        printf("%d\n", i);
+        
         quick_sort(a, first, i-1);
         quick_sort(a, i+1, last);
     }
